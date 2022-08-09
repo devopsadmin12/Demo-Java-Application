@@ -20,3 +20,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: dependency-check-build-task@6
+  inputs:
+    projectName: 'WebGoat-SCA'
+    scanPath: 'src/main'
+    format: 'HTML'
+    reportFilename: 'Dependency-Check'
