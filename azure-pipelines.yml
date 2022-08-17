@@ -20,3 +20,10 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: InstallFortifySCA@7
+  inputs:
+    InstallerPath: 'C:\Program Files\Fortify\Fortify_SCA_and_Apps_20.1.0'
+    VS2015: false
+    LicenseFile: 'C:\Fortify\fortify.license'
+    RunFortifyRulepackUpdate: false
+    ProxyPort: 80
